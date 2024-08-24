@@ -58,6 +58,10 @@ function deleteC () {
 }
 
 function plus () {
+    let lastChar = calculator.display[calculator.display.length-1];
+    if ( lastChar == "+" || lastChar == "-" || lastChar == "x" || lastChar == "/"){
+        calculator.deleteChar();
+    }
     calculator.display += "+";
     screenDisplay.textContent = calculator.display;
 }
